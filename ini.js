@@ -25,7 +25,7 @@ function calculate(evt) {
   }
 }
 
-var temp = '<li> <span class = "<%= ______ %>"> <%= _ %> </span>\n';
+var temp = '<li> <span class = "<%= _____ %>"> <%= _ %> </span>\n';
 
 function tokensToString(tokens) {
    var r = '';
@@ -39,17 +39,17 @@ function tokensToString(tokens) {
 }
 
 function lexer(input) {
-  var blanks         = /^___/;
-  var iniheader      = /^________________/;
-  var comments       = /^________/;
-  var nameEqualValue = /^________________________/;
-  var any            = /^_______/;
+  var blanks         = /^\s+$/;
+  var iniheader      = /^\[[a-zA-Z_]\w*\]$/;
+  var comments       = /^;.*/;
+  var nameEqualValue = /^[a-zA-Z_]\w*\s*(?:=)/;
+  var any            = /^(.|\n)+/;
 
   var out = [];
   var m = null;
 
   while (input != '') {
-    if (m = blanks.____(input)) {
+    if (m = blanks.exec(input)) {
       input = input.substr(m.index+___________);
       out.push({ type : ________, match: _ });
     }
