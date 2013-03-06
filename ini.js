@@ -43,7 +43,7 @@ function lexer(input) {
   var iniheader      = /^\[[a-zA-Z_]\w*\]$/;
   var comments       = /^;.*/;
   var nameEqualValue = /^[a-zA-Z_]\w*\s*(?:=)/;
-  var any            = /^(.|\n)+/;            = /^_______/;
+  var any            = /^(.|\n)+/;
 
   var out = [];
   var m = null;
