@@ -29,7 +29,7 @@ table.center { margin-left:auto; margin-right:auto; }
 #result      { border-color: red; }
 tr.error       { background-color: red; }
 pre.output   { background-color: white; }
-span.repeated { background-color: green }
+span.any { background-color: green }
 span.header { background-color: blue }
 span.comments { background-color: orange }
 span.blanks { background-color: yellow }
