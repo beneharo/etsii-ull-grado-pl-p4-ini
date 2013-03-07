@@ -54,7 +54,7 @@ function lexer(input) {
     console.log("Ahora es: " + input);
     if (m = blanks.exec(input)) {
       input = input.substr(m.index + m[0].length);
-      out.push({ type : "blanks", match: m });
+      out.push({ type : "blanks", match: m[0] });
     }
     else if (m = iniheader.exec(input)) {
       console.log("Index: " + m.index + " Input: " + m.input + " Size: " + m.input.length);
